@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --rb-bg: #060a17;
+    --rb-panel: #0b1224;
+    --rb-surface: #121c36;
+    --rb-border: #1e2b4d;
+    --rb-blue: #0038a8;
+    --rb-electric: #1e41ff;
+    --rb-red: #dc0000;
+    --rb-yellow: #ffd700;
+  }
+
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color: var(--rb-bg);
+    color: #f8fafc;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+/* Subtle CV pixel-grid background */
+.cv-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(30, 65, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 65, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Red Bull racing accent stripe */
+.rb-stripe {
+  background: linear-gradient(90deg, #dc0000 0%, #ffd700 50%, #0038a8 100%);
+}
+
+/* Custom range slider */
+input[type="range"].rb-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #1e2b4d;
+  outline: none;
+}
+
+input[type="range"].rb-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffd700;
+  border: 2px solid #dc0000;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.45);
+}
